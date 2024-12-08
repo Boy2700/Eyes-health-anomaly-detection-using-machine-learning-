@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eye Test Diagnostic App</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div id="app">
+        <div id="welcome-screen" class="screen">
+            <h1>Welcome to</h1>
+            <h1>Eyes health anomaly detection using machine learning </h1>
+            <p>You'll see letters on the screen. <br> Select the largest letter first, then the smallest letter. <br>Your score will determine your eye health.</p>
+            <button id="start-test">Start Test</button>
+            <button id="open-settings">Settings</button>
+        </div>
+
+        <div id="test-screen" class="screen hidden">
+            <h2 id="test-instruction"></h2>
+            <p id="timer"></p>
+            <div id="letters-container"></div>
+        </div>
+
+        <div id="result-screen" class="screen hidden">
+            <h2>Test Results</h2>
+            <p id="score-display"></p>
+            <p id="time-display"></p>
+            <p id="diagnosis"></p>
+            <button id="share-results">Share Results</button>
+            <button id="retake-test">Take Test Again</button>
+        </div>
+
+        <div id="settings-screen" class="screen hidden">
+            <h2>Settings</h2>
+            <div class="setting">
+                <label for="dark-mode">Dark Mode:</label>
+                <input type="checkbox" id="dark-mode">
+            </div>
+            <div class="setting">
+                <label for="difficulty">Difficulty:</label>
+                <select id="difficulty">
+                    <option value="easy">Easy</option>
+                    <option value="medium">Medium</option>
+                    <option value="hard">Hard</option>
+                </select>
+            </div>
+            <div class="setting">
+                <label for="num-letters">Number of Letters:</label>
+                <select id="num-letters">
+                    <option value="3">3</option>
+                    <option value="5">5</option>
+                    <option value="7">7</option>
+                </select>
+            </div>
+            <div class="setting">
+                <label for="time-limit">Time Limit (seconds):</label>
+                <select id="time-limit">
+                    <option value="5">5</option>
+                    <option value="10">10</option>
+                    <option value="15">15</option>
+                </select>
+            </div>
+            <button id="save-settings">Save Settings</button>
+        </div>
+    </div>
+    <footer class="footer">
+        Allright reserved &copy; 2024 Eyes health Anomaly detection using machine learning | Ayo Daniel Jemibola </footer>
+    <script src="script.js"></script>
+</body>
+</html>
+
